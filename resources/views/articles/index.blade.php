@@ -16,6 +16,9 @@
             <p>{{ $article->title }}</p>
         </a>
     @endforeach
+
+    <!-- 新規登録画面へジャンプする -->
+    <input type="button" onclick="location.href='/articles/create'" value="新規登録">
 </body>
 
 </html>

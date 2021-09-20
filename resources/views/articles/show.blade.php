@@ -14,5 +14,7 @@
     <p>
         <b>{{ $article->body }}</b>
     </p>
+    <!-- 新規登録画面へジャンプする -->
+    <input type="button" onclick="location.href='/articles'" value="一覧へ戻る">
 </body>
 </html>
