@@ -9,7 +9,7 @@ use App\Models\Article;
 
 class ArticleController extends Controller
 {
-        // showページへ移動
+    // showページへ移動
     public function show($id)
     {
         $article = Article::find($id);
@@ -42,5 +42,32 @@ class ArticleController extends Controller
         return redirect('/articles');
     }
 
-    
+    public function edit($id)
+    {
+        $article = Article::find($id);
+        return view('articles.edit', ['article' => $article]);
+    }
+
+
+    public function update(ArticleRequest $request, $id)
+    {
+        //元のデータを取得
+        $article = Article::find($id);
+        //値を用意
+        $article->title = $request->title;
+        $article->body = $request->body;
+
+        //保存
+        $article->save();
+        // 登録したらindexに戻る
+        return redirect('/articles');
+    }
+
+    public function destroy($id)
+    {
+        $article = Article::find($id);
+        $article->delete();
+
+        return redirect('/articles');
+    }
 }

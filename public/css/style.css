@@ -5,3 +5,9 @@ li{
 label {
     display: block;
 }
+.button{
+    display: flex;
+}
+.error {
+    color: red;
+}
