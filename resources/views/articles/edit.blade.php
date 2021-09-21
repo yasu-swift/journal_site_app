@@ -27,11 +27,11 @@
         @method('PATCH')
         <p>論文タイトル</p>
         <p>
-            <label for="title"><input type="text" name="title" value="{{ $article->title }}"></label>
+            <label for="title"><input type="text" name="title" value="{{ old('title', $article->title) }}"></label>
         </p>
         <p>本文</p>
         <p>
-            <textarea name="body" id="" cols="30" rows="10">{{ $article->body }}</textarea>
+            <textarea name="body">{{ old('body', $article->body) }}</textarea>
         </p>
         <input type="submit" value="編集">
     </form>

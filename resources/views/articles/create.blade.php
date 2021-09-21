@@ -35,8 +35,6 @@
         </p>
         <input type="submit" value="投稿">
     </form>
-    <!-- 新規登録画面へジャンプする -->
-    <input type="button" onclick="location.href='/articles'" value="一覧へ戻る">
 </body>
 
 </html>
